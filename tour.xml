@@ -37,7 +37,7 @@
 			width="5%"
 			height="prop"
 			capture="false"
-			onclick="loadscene(scene_426_palerme_equi, MERGE, KEEPVIEW, BLEND(2));" />
+			onclick="loadscene(scene_426_palerme_EQUI, MERGE, KEEPVIEW, BLEND(2));" />
 		<layer name="d427"
 			type="image"
 			url="skin/dot.png"
@@ -46,7 +46,7 @@
 			width="5%"
 			height="prop"
 			capture="false"
-			onclick="loadscene(scene_426_palerme_oggi_spostata_equi, MERGE, KEEPVIEW, BLEND(2));" />
+			onclick="loadscene(scene_426_palerme_oggi_spostata_EQUI, MERGE, KEEPVIEW, BLEND(2));" />
 	</layer>		
 	
 	<layer name="maps"
@@ -130,7 +130,7 @@
 	
 
 	
-	<scene name="scene_426_palerme_oggi_spostata_equi" title="426 Le port (n°1) - Oggi" onstart="" thumburl="panos/426_Palerme_oggi_spostata_EQUI.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+	<scene name="scene_426_palerme_oggi_spostata_EQUI" title="426 Le port (n°1) - Oggi" onstart="" thumburl="panos/426_Palerme_oggi_spostata_EQUI.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -144,7 +144,7 @@
 
 	</scene>
 
-	<scene name="scene_426_palerme_equi" title="426 Le port (n°1) - 1900 Lumière" onstart="" thumburl="panos/426_Palerme_EQUI.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+	<scene name="scene_426_palerme_EQUI" title="426 Le port (n°1) - 1900 Lumière" onstart="" thumburl="panos/426_Palerme_EQUI.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
