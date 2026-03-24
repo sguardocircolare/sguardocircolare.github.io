@@ -37,7 +37,7 @@
 			width="5%"
 			height="prop"
 			capture="false"
-			onclick="loadscene(scene_426_palerme___le_port_(now1)_equi, MERGE, KEEPVIEW, BLEND(2));" />
+			onclick="loadscene(scene_426_palerme_equi, MERGE, KEEPVIEW, BLEND(2));" />
 		<layer name="d427"
 			type="image"
 			url="skin/dot.png"
@@ -144,16 +144,16 @@
 
 	</scene>
 
-	<scene name="scene_426_palerme___le_port_(now1)_equi" title="426 Le port (n°1) - 1900 Lumière" onstart="" thumburl="panos/426_Palerme___Le_port_(now1)_EQUI.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+	<scene name="scene_426_palerme_equi" title="426 Le port (n°1) - 1900 Lumière" onstart="" thumburl="panos/426_Palerme_EQUI.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
 		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="range" vlookatmin="-30" vlookatmax="30" />
 
-		<preview url="panos/426_Palerme___Le_port_(now1)_EQUI.tiles/preview.jpg" />
+		<preview url="panos/426_Palerme_EQUI.tiles/preview.jpg" />
 
 		<image>
-			<cube url="panos/426_Palerme___Le_port_(now1)_EQUI.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1536" />
+			<cube url="panos/426_Palerme_EQUI.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1536" />
 		</image>
 		
 		<hotspot name="spot1" type="image"
