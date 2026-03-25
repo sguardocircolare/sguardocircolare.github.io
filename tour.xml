@@ -58,7 +58,7 @@
 	               maps_zoombuttons="false"
 	               maps_loadonfirstuse="true"
 	               gyro="true"
-	               gyro_keeplookingdirection="false"
+	               gyro_keeplookingdirection="true"
 	               webvr="false"
 	               webvr_keeplookingdirection="true"
 	               webvr_prev_next_hotspots="true"
