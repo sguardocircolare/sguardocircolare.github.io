@@ -33,7 +33,7 @@
 			type="image"
 			url="skin/dot.png"
 			x="52%"
-			y="41%"
+			y="42%"
 			width="4%"
 			height="prop"
 			capture="false"
@@ -109,7 +109,7 @@
 	               design_bgcolor="0x2D3E50"
 	               design_bgalpha="0.5"
 	               design_bgborder="0"
-	               design_bgroundedge="20"
+	               design_bgroundedge="0"
 	               design_bgshadow="0 4 10 0x000000 0.3"
 	               design_thumbborder_bgborder="3 0xFFFFFF 1.0"
 	               design_thumbborder_padding="2"
@@ -178,15 +178,15 @@
 	    			scale="0.3"
 				align="center"
 				visible="false"
-				capture="false" />
+				capture="false"
+				onclick="toggle(layer[box].visible); toggle(layer[img1].visible); toggle(layer[testo].visible);"/>
 			<layer name="testo" type="text"
 				align="bottom"
 				text="Castello a mare"
-				css="font-family:Calibri; font-size:16px; color:#FFFFFF;"
+				css="font-family:Calibri; font-size:14px; color:#FFFFFF;"
 				bgalpha="0"
 				visible="false"
-				capture="false"
-				onclick="toggle(layer[box].visible); toggle(layer[img1].visible); toggle(layer[testo].visible);"/>
+				capture="false" />
 		</layer>
 	</scene>
 
