@@ -49,20 +49,7 @@
 			onclick="loadscene(scene_426_palerme_oggi_spostata_EQUI, MERGE, KEEPVIEW, BLEND(2));" />
 	</layer>		
 	
-	<layer name="maps"
-		type="image"
-		url="skin/Mappa.png"
-		style="skin_base|skin_glow"
-		scale="0.07"
-		keep="true"
-		x="10%"
-		y="-5%"
-		onclick="toggle(layer[Photorama].visible);"
-		"if(device.mobile==true, set scale="0.5""/>
-	/>
-
 	
-
 	<!-- customize skin settings: maps, gyro, webvr, thumbnails, tooltips, layout, design, ... -->
 	<skin_settings maps="false"
 	               maps_type="openstreetmaps"

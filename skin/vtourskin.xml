@@ -421,8 +421,8 @@
 				</layer>
 				<layer name="skin_btn_next"      style="skin_base|skin_glow" crop="64|64|64|64"  align="right"       x="5"    y="0"   scale="0.5" alpha="0.5"  onclick="if(skin_settings.thumbs_loop, skin_nextscene_loop(+1), skin_nextscene(+1) );" />
 				</layer>
-				<layer name="maps" type="image" url="skin/Mappa.png" scale="0.25" keep="true" />
-			</layer>
+				<layer name="maps" type="image" url="Mappa.png" style="skin_base|skin_glow" scale="0.07" x="10%" y="-5%" onclick="toggle(layer[Photorama].visible);" />
+				</layer>
 
 		<layer name="skin_loadingtext" type="text" align="center" x="5" y="-5" html="get:skin_settings.loadingtext" visible="false" bg="false" enabled="false" css="calc:skin_settings.design_text_css + ' text-align:center; font-style:italic; font-size:22px;'" txtshadow="get:skin_settings.design_text_txtshadow" />
 		<layer name="skin_buttonglow"  style="skin_base" crop="64|384|64|64" align="center" x="0" y="1" scale="1.0" alpha="0.0" visible="false" enabled="false" />
