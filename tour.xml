@@ -1,5 +1,15 @@
 ﻿<krpano version="1.23" title="Palermo">
 
+	<plugin name="gyro"
+	        url="%VIEWER%/plugins/gyro2.js"
+	        enabled="true"
+	        onavailable="gyro_onavailable();"
+	        onunavailable="showinfo('No Gyroscope available');"
+	        ondenied="showinfo('Gyroscope usage denied');"
+	        absolute="false"
+	        north="0"
+	        />
+
 	<include url="skin/vtourskin.xml" />
 
 	<layer name="Photorama"
@@ -58,7 +68,7 @@
 	               maps_zoombuttons="false"
 	               maps_loadonfirstuse="true"
 	               gyro="true"
-	               gyro_keeplookingdirection="true"
+	               gyro_keeplookingdirection="false"
 	               webvr="false"
 	               webvr_keeplookingdirection="true"
 	               webvr_prev_next_hotspots="true"
