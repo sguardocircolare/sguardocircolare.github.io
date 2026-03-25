@@ -2,7 +2,9 @@
 
 	<plugin name="gyro"
 	        url="%VIEWER%/plugins/gyro2.js"
-	        enabled="true"
+	        devices="html5"
+		keep="true"
+		enabled="true"
 	       	camroll="true"
 		onavailable="gyro_onavailable();"
 	        onunavailable="showinfo('No Gyroscope available');"
