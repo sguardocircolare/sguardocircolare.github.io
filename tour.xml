@@ -9,8 +9,8 @@
 		onavailable="gyro_onavailable();"
 	        onunavailable="showinfo('No Gyroscope available');"
 	        ondenied="showinfo('Gyroscope usage denied');"
-	        absolute="false"
-	        north="0"
+	        absolute="true"
+	        north="90.0"
 	        />
 
 	<include url="skin/vtourskin.xml" />
