@@ -34,7 +34,7 @@
 			url="skin/dot.png"
 			x="52%"
 			y="41%"
-			width="5%"
+			width="4%"
 			height="prop"
 			capture="false"
 			onclick="loadscene(scene_426_palerme_EQUI, MERGE, KEEPVIEW, BLEND(2));" />
@@ -43,7 +43,7 @@
 			url="skin/dot.png"
 			x="60%"
 			y="50%"
-			width="5%"
+			width="4%"
 			height="prop"
 			capture="false"
 			onclick="loadscene(scene_426_palerme_oggi_spostata_EQUI, MERGE, KEEPVIEW, BLEND(2));" />
@@ -52,6 +52,7 @@
 	<layer name="maps"
 		type="image"
 		url="skin/Mappa.png"
+		style="skin_base|skin_glow"
 		scale="0.07"
 		keep="true"
 		x="10%"
@@ -184,7 +185,8 @@
 				css="font-family:Calibri; font-size:16px; color:#FFFFFF;"
 				bgalpha="0"
 				visible="false"
-				capture="false" />
+				capture="false"
+				onclick="toggle(layer[box].visible); toggle(layer[img1].visible); toggle(layer[testo].visible);"/>
 		</layer>
 	</scene>
 
