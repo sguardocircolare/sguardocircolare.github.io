@@ -27,17 +27,17 @@
 		scalechildren="true"
 		bgcapture="true"
 		expanded="false"
-		visible="fasle"
+		visible="false"
 		onclick="if(expanded=='false',
 				set (expanded, 'true');
-				tween(width, 400, 0.5, easeOutQuad); tween(height, 242, 0.5, easeOutQuad);
+				tween(width, 400, 0.5, easeOutQuad); tween(height, 285, 0.5, easeOutQuad);
 				,
 				set (expanded, 'false');
-				tween(width, 200, 0.5, easeInQuad); tween(height, 121, 0.5, easeInQuad););"
+				tween(width, 250, 0.5, easeInQuad); tween(height, 175, 0.5, easeInQuad););"
 		>
 		<layer name="Photorama_mappa"
 			type="image"
-			url="skin/Photorama_mappa.png"
+			url="skin/Photorama_map.png"
 			align="center"
 			width="100%"
 			height="prop"
@@ -45,33 +45,31 @@
 		<layer name="d426"
 			type="image"
 			url="skin/dot.png"
-			x="52%"
-			y="42%"
-			width="4%"
+			x="44%"
+			y="36%"
+			width="3%"
 			height="prop"
 			capture="false"
 			onclick="loadscene(scene_426_palerme_oggi_spostata_EQUI, MERGE, KEEPVIEW, BLEND(2));" />
 		<layer name="d427"
 			type="image"
 			url="skin/dot.png"
-			x="60%"
-			y="50%"
-			width="4%"
+			x="59%"
+			y="26%"
+			width="3%"
 			height="prop"
 			capture="false"
 			onclick="loadscene(scene_427_palerme_oggi_spostata_EQUI, MERGE, KEEPVIEW, BLEND(2));" />
 		<layer name="d428"
 			type="image"
 			url="skin/dot.png"
-			x="40%"
-			y="19%"
-			width="4%"
+			x="6%"
+			y="39%"
+			width="3%"
 			height="prop"
 			capture="false"
 			onclick="loadscene(scene_428_palerme_oggi_spostata_EQUI, MERGE, KEEPVIEW, BLEND(2));" />
-
 	</layer>		
-	
 	
 	<!-- customize skin settings: maps, gyro, webvr, thumbnails, tooltips, layout, design, ... -->
 	<skin_settings maps="false"
@@ -142,7 +140,7 @@
 	
 
 	
-	<scene name="scene_426_palerme_oggi_spostata_EQUI" title="426 Le port (n°1) - Oggi" onstart="" thumburl="panos/426_Palerme_oggi_spostata_EQUI.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+	<scene name="scene_426_palerme_oggi_spostata_EQUI" title="426 Le port (n°1) - Oggi" onstart="set(layer[d426].url, 'skin/dot_red.png'); set(layer[d427].url, 'skin/dot.png'); set(layer[d428].url, 'skin/dot.png')" thumburl="panos/426_Palerme_oggi_spostata_EQUI.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -154,10 +152,11 @@
 			<cube url="panos/426_Palerme_oggi_spostata_EQUI.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048,4096" />
 		</image>
 
+		<layer name="ieri" type="image" url="skin/IERI.png" style="skin_base|skin_glow" parent="skin_control_bar" x="290" y="4" scale="0.06" onclick="loadscene('scene_426_palerme_EQUI', MERGE, KEEPVIEW, BLEND(1));" />
 	</scene>
 
-	<scene name="scene_426_palerme_EQUI" title="426 Le port (n°1) - 1900 Lumière" onstart="" thumburl="panos/426_Palerme_EQUI.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
-		
+	<scene name="scene_426_palerme_EQUI" title="426 Le port (n°1) - 1900 Lumière" onstart="set(layer[d426].url, 'skin/dot_red.png'); set(layer[d427].url, 'skin/dot.png'); set(layer[d428].url, 'skin/dot.png')" thumburl="panos/426_Palerme_EQUI.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		 
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
 		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="range" vlookatmin="-30" vlookatmax="30" />
@@ -168,6 +167,8 @@
 			<cube url="panos/426_Palerme_EQUI.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1536" />
 		</image>
 		
+		<layer name="oggi" type="image" url="skin/OGGI.png" style="skin_base|skin_glow" parent="skin_control_bar" x="350" y="4" scale="0.06" onclick="loadscene('scene_426_palerme_oggi_spostata_EQUI', MERGE, KEEPVIEW, BLEND(1));" />
+
 		<hotspot name="spot1" type="image"
 	   		url="skin/info_n.png"
 	    		scale="0.08"
@@ -187,21 +188,22 @@
 			<layer name="img1" type="image"
 	   			url="skin/Castelloamare.jpg"
 	    			scale="0.3"
-				align="center"
+				align="top"
 				visible="false"
 				capture="false"
 				onclick="toggle(layer[box].visible); toggle(layer[img1].visible); toggle(layer[testo].visible);"/>
 			<layer name="testo" type="text"
 				align="bottom"
-				text="Castello a mare"
+				text="Castello a mare di Palermo, fortezza difensiva del porto cittadino dall'epoca araba all'inizio del XX secolo."
 				css="font-family:Calibri; font-size:14px; color:#FFFFFF;"
+				width="350"
 				bgalpha="0"
 				visible="false"
 				capture="false" />
 		</layer>
 	</scene>
 
-	<scene name="scene_427_palerme_oggi_spostata_equi" title="427 Le port (n°2) - Oggi" onstart="" thumburl="panos/427_Palerme_oggi_spostata_EQUI.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+	<scene name="scene_427_palerme_oggi_spostata_EQUI" title="427 Le port (n°2) - Oggi" onstart="set(layer[d426].url, 'skin/dot.png'); set(layer[d427].url, 'skin/dot_red.png'); set(layer[d428].url, 'skin/dot.png')" thumburl="panos/427_Palerme_oggi_spostata_EQUI.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -212,9 +214,12 @@
 		<image>
 			<cube url="panos/427_Palerme_oggi_spostata_EQUI.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048,4096" />
 		</image>
+
+		<layer name="ieri" type="image" url="skin/IERI.png" style="skin_base|skin_glow" parent="skin_control_bar" x="290" y="4" scale="0.06" onclick="loadscene('scene_427_palerme_EQUI', MERGE, KEEPVIEW, BLEND(1));" />
+
 	</scene>
 
-<scene name="scene_427_palerme_equi" title="427 Le port (n°2) - 1900 Lumière" onstart="" thumburl="panos/427_Palerme_EQUI.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+<scene name="scene_427_palerme_equi" title="427 Le port (n°2) - 1900 Lumière" onstart="set(layer[d426].url, 'skin/dot.png'); set(layer[d427].url, 'skin/dot_red.png'); set(layer[d428].url, 'skin/dot.png')" thumburl="panos/427_Palerme_EQUI.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -225,9 +230,12 @@
 		<image>
 			<cube url="panos/427_Palerme_EQUI.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1536" />
 		</image>
+
+		<layer name="oggi" type="image" url="skin/OGGI.png" style="skin_base|skin_glow" parent="skin_control_bar" x="350" y="4" scale="0.06" onclick="loadscene('scene_427_palerme_oggi_spostata_EQUI', MERGE, KEEPVIEW, BLEND(1));" />
+
 	</scene>
 
-	<scene name="scene_428_palerme_oggi_spostata_equi" title="428 La Cala - Oggi" onstart="" thumburl="panos/428_Palerme_oggi_spostata_EQUI.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+	<scene name="scene_428_palerme_oggi_spostata_equi" title="428 La Cala - Oggi" onstart="set(layer[d426].url, 'skin/dot.png'); set(layer[d427].url, 'skin/dot.png'); set(layer[d428].url, 'skin/dot_red.png')" thumburl="panos/428_Palerme_oggi_spostata_EQUI.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -238,9 +246,12 @@
 		<image>
 			<cube url="panos/428_Palerme_oggi_spostata_EQUI.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048,4096" />
 		</image>
+
+		<layer name="ieri" type="image" url="skin/IERI.png" style="skin_base|skin_glow" parent="skin_control_bar" x="290" y="4" scale="0.06" onclick="loadscene('scene_428_palerme_EQUI', MERGE, KEEPVIEW, BLEND(1));" />
+
 	</scene>
 
-<scene name="scene_428_palerme_equi" title="428 La Cala - 1900 Lumière" onstart="" thumburl="panos/428_Palerme_EQUI.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+<scene name="scene_428_palerme_equi" title="428 La Cala - 1900 Lumière" onstart="set(layer[d426].url, 'skin/dot.png'); set(layer[d427].url, 'skin/dot.png'); set(layer[d428].url, 'skin/dot_red.png')" thumburl="panos/428_Palerme_EQUI.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -251,6 +262,41 @@
 		<image>
 			<cube url="panos/428_Palerme_EQUI.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1536" />
 		</image>
+		
+		<layer name="oggi" type="image" url="skin/OGGI.png" style="skin_base|skin_glow" parent="skin_control_bar" x="350" y="4" scale="0.06" onclick="loadscene('scene_428_palerme_oggi_spostata_EQUI', MERGE, KEEPVIEW, BLEND(1));" />
+
+		<hotspot name="spot1" type="image"
+	   		url="skin/info_n.png"
+	    		scale="0.08"
+	       		ath="-85"
+			atv="-9"
+			onclick="toggle(layer[box].visible); toggle(layer[img1].visible); toggle(layer[testo].visible);"/>
+		<layer name="box" type="container"
+	   		bgcolor="0x000000"
+			bgalpha="0.4"
+			alpha="1"
+			width="300"
+			height="300"
+			visible="false"
+	       		align="center"
+			children="true"
+			capture="false">
+			<layer name="img1" type="image"
+	   			url="skin/Piedigrotta.jpg"
+	    			scale="0.5"
+				align="top"
+				visible="false"
+				capture="false"
+				onclick="toggle(layer[box].visible); toggle(layer[img1].visible); toggle(layer[testo].visible);"/>
+			<layer name="testo" type="text"
+				align="bottom"
+				text="Chiesa di Santa Maria di Piedigrotta, costruita a metà del XVI secolo sull'antica grotta della Madonna della Pietà."
+				css="font-family:Calibri; font-size:14px; color:#FFFFFF;"
+				width="290"
+				bgalpha="0"
+				visible="false"
+				capture="false" />
+		</layer>
 	</scene>
 
 </krpano>

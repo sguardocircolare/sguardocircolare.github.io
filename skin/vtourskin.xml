@@ -12,9 +12,9 @@
 	               maps_loadonfirstuse="true"
 	               gyro="true"
 	               gyro_keeplookingdirection="false"
-	               webvr="true"
-	               webvr_keeplookingdirection="true"
-	               webvr_prev_next_hotspots="true"
+	               webvr="false"
+	               webvr_keeplookingdirection="false"
+	               webvr_prev_next_hotspots="false"
 	               autotour="false"
 	               littleplanetintro="false"
 	               followmousecontrol="false"
@@ -406,12 +406,12 @@
 				<layer name="skin_btn_map"       style="skin_base|skin_glow" crop="64|128|64|64" align="left"        x="90"   y="0"  scale="0.5" ondown="skin_showthumbs(false); skin_showmap();" visible="false" />
 				<layer name="maps" type="image" url="Mappa.png" style="skin_base|skin_glow" align="left" x="75" y="2" scale="0.07" onclick="toggle(layer[Photorama].visible);" />
 				<layer name="skin_btn_navi" type="container" align="center" x="0" width="240" height="32">
-					<layer name="skin_btn_left"  style="skin_base|skin_glow" crop="0|192|64|64"  align="center"      x="-100" y="0"  scale="0.5" ondown="set(hlookat_moveforce,-1);" onup="set(hlookat_moveforce,0);" />
-					<layer name="skin_btn_right" style="skin_base|skin_glow" crop="64|192|64|64" align="center"      x="-60"  y="0"  scale="0.5" ondown="set(hlookat_moveforce,+1);" onup="set(hlookat_moveforce,0);" />
-					<layer name="skin_btn_up"    style="skin_base|skin_glow" crop="0|256|64|64"  align="center"      x="-20"  y="0"  scale="0.5" ondown="set(vlookat_moveforce,-1);" onup="set(vlookat_moveforce,0);" />
-					<layer name="skin_btn_down"  style="skin_base|skin_glow" crop="64|256|64|64" align="center"      x="+20"  y="0"  scale="0.5" ondown="set(vlookat_moveforce,+1);" onup="set(vlookat_moveforce,0);" />
-					<layer name="skin_btn_in"    style="skin_base|skin_glow" crop="0|320|64|64"  align="center"      x="+60"  y="0"  scale="0.5" ondown="set(fov_moveforce,-1);"     onup="set(fov_moveforce,0);" />
-					<layer name="skin_btn_out"   style="skin_base|skin_glow" crop="64|320|64|64" align="center"      x="+100" y="0"  scale="0.5" ondown="set(fov_moveforce,+1);"     onup="set(fov_moveforce,0);" />
+					<layer name="skin_btn_left"  style="skin_base|skin_glow" crop="0|192|64|64"  align="center"      x="-100" y="0"  scale="0.5" ondown="set(hlookat_moveforce,-1);" onup="set(hlookat_moveforce,0);" visible="false" />
+					<layer name="skin_btn_right" style="skin_base|skin_glow" crop="64|192|64|64" align="center"      x="-60"  y="0"  scale="0.5" ondown="set(hlookat_moveforce,+1);" onup="set(hlookat_moveforce,0);" visible="false" />
+					<layer name="skin_btn_up"    style="skin_base|skin_glow" crop="0|256|64|64"  align="center"      x="-20"  y="0"  scale="0.5" ondown="set(vlookat_moveforce,-1);" onup="set(vlookat_moveforce,0);" visible="false" />
+					<layer name="skin_btn_down"  style="skin_base|skin_glow" crop="64|256|64|64" align="center"      x="+20"  y="0"  scale="0.5" ondown="set(vlookat_moveforce,+1);" onup="set(vlookat_moveforce,0);" visible="false" />
+					<layer name="skin_btn_in"    style="skin_base|skin_glow" crop="0|320|64|64"  align="center"      x="+60"  y="0"  scale="0.5" ondown="set(fov_moveforce,-1);"     onup="set(fov_moveforce,0);" visible="false" />
+					<layer name="skin_btn_out"   style="skin_base|skin_glow" crop="64|320|64|64" align="center"      x="+100" y="0"  scale="0.5" ondown="set(fov_moveforce,+1);"     onup="set(fov_moveforce,0);" visible="false" />
 				</layer>
 				<layer name="skin_btn_gyro"      style="skin_base|skin_glow" crop="0|384|64|64"  align="center"      x="+140" y="0"  scale="0.5" onclick="switch(plugin[skin_gyro].enabled); if(plugin[skin_gyro].enabled, skin_showmap(false));" visible="false" />
 				<layer name="skin_btn_vr"        style="skin_base|skin_glow" crop="0|0|80|64"    align="center"      x="+146" y="0"  scale="0.5" onclick="webvr.enterVR();" visible="false" />
