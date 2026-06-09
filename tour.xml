@@ -4,7 +4,7 @@
 	        url="%VIEWER%/plugins/gyro2.js"
 	        devices="html5"
 		keep="true"
-		enabled="true"
+		enabled="false"
 	       	camroll="true"
 		onavailable="gyro_onavailable();"
 	        onunavailable="showinfo('No Gyroscope available');"
@@ -152,7 +152,7 @@
 			<cube url="panos/428_Palerme_oggi_spostata_EQUI.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048,4096" />
 		</image>
 
-		<layer name="ieri" type="image" url="skin/IERI.png" style="skin_base|skin_glow" parent="skin_control_bar" align="center" x="0" y="0" scale="0.06" onclick="loadscene('scene_428_palerme_EQUI', MERGE, KEEPVIEW, BLEND(1));" />
+		<layer name="ieri" type="image" url="skin/IERI.png" style="skin_base|skin_glow" parent="skin_control_bar" align="center" x="10" y="0" scale="0.06" onclick="loadscene('scene_428_palerme_EQUI', MERGE, KEEPVIEW, BLEND(1));" />
 
 	</scene>
 
