@@ -439,7 +439,7 @@
 
 
 	<!-- gyro plugin -->
-	<plugin name="skin_gyro" keep="true" url="" plugin_url="%VIEWER%/plugins/gyro2.js" softstart="1.0" desktopsupport="false" enabled="false"
+	<plugin name="skin_gyro" keep="true" url="" plugin_url="%VIEWER%/plugins/gyro2.js" softstart="1.0" desktopsupport="false" enabled="true"
 		onavailable="skin_arrange_buttons();"
 		ondenied="skin_gyro_ondenied();" 
 		/>
